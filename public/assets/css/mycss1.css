@@ -1,0 +1,51 @@
+        body { 
+            background-color: #a0b9d3;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-right: 150px;
+            margin-left: 80px;
+
+        }
+        p{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+
+        #bikinJadiTengah {
+            text-align: center;
+            font-size: xx-small;
+        }
+        .bikinJadiTengah2 {
+            text-align: center;
+            font-size: xx-small;
+        }
+        .judulBerita {
+           text-align: center;
+           font-size: 30px;
+           color: aquamarine;
+
+        }
+        .judulgambar {
+            text-align: center;
+            font-size: small;
+        }
+        .fonterbold {
+            font-weight: bold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        a:link{
+            text-decoration: none;
+            color: rgb(55, 85,235);
+        }
+        a:hover {
+            text-decoration: none;
+            color: rgb(55, 85,235);
+        }
+        a.visited {
+            text-decoration: none;
+            color: rgb(55, 85,235);
+        }
+        .formatgambar {
+            border-radius: 15px;
+        }
