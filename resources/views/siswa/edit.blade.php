@@ -1,8 +1,8 @@
 @extends('template')
-@section('title', 'Data Siswa')
+@section('title', 'Data Pegawai')
 @section('konten')
 
-    <h2>Tambah Siswa</h2>
+    <h2>Edit Siswa</h2>
 
     @if ($errors->any())
         <ul style="color: red;">
@@ -12,30 +12,32 @@
         </ul>
     @endif
 
-    <form action="{{ route('siswa.store') }}" method="POST" onsubmit="return validasiForm()">
+    <form action="{{ route('siswa.update', $siswa->NRP) }}" method="POST" onsubmit="return validasiForm()">
         @csrf
+        @method('PUT')
 
         <p>
             <label>NRP</label><br>
-            <input type="text" name="NRP" id="NRP" maxlength="10" value="{{ old('NRP') }}">
+            <input type="text" name="NRP" id="NRP" maxlength="10" value="{{ old('NRP', $siswa->NRP) }}">
         </p>
 
         <p>
             <label>Nama</label><br>
-            <input type="text" name="Nama" id="Nama" maxlength="20" value="{{ old('Nama') }}">
+            <input type="text" name="Nama" id="Nama" maxlength="20" value="{{ old('Nama', $siswa->Nama) }}">
         </p>
 
         <p>
             <label>Kelas</label><br>
-            <input type="text" name="Kelas" id="Kelas" maxlength="5" value="{{ old('Kelas') }}">
+            <input type="text" name="Kelas" id="Kelas" maxlength="5" value="{{ old('Kelas', $siswa->Kelas) }}">
         </p>
 
         <p>
             <label>Tanggal Lahir</label><br>
-            <input type="date" name="TanggalLahir" id="TanggalLahir" value="{{ old('TanggalLahir') }}">
+            <input type="date" name="TanggalLahir" id="TanggalLahir"
+                value="{{ old('TanggalLahir', $siswa->TanggalLahir) }}">
         </p>
 
-        <button type="submit">Simpan</button>
+        <button type="submit">Update</button>
         <a href="{{ route('siswa.index') }}">Kembali</a>
     </form>
 
@@ -107,7 +109,6 @@
                     icon: "error"
                 });
                 return false;
-
             }
 
             return true;
