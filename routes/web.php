@@ -7,6 +7,7 @@ use App\Http\Controllers\PegawaiDBController ;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\BelanjaController;
 use App\Http\Controllers\NilaiController;
+use App\Http\Controllers\HarddiskController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -83,3 +84,7 @@ Route::get('/belanja/batal/{id}', [BelanjaController::class, 'batal']);
 Route::get('/nilai', [NilaiController::class, 'index'])->name('nilaikuliah.index');
 Route::get('/nilai/create', [NilaiController::class, 'create'])->name('nilaikuliah.create');
 Route::post('/nilai/store', [NilaiController::class, 'store'])->name('nilaikuliah.store');
+
+Route::get('/harddisk', [HarddiskController::class, 'index'])->name('harddisk.index');
+Route::get('/harddisk/create', [HarddiskController::class, 'create'])->name('harddisk.create');
+Route::post('/harddisk/store', [HarddiskController::class, 'store'])->name('harddisk.store');
