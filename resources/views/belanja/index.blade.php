@@ -8,6 +8,8 @@
         <p style="color: green;">{{ session('success') }}</p>
     @endif
 
+    <a href="{{ route('belanja.tambah') }}">Tambah Belanja</a>
+
     <table class="table table-striped table-hover">
         <tr>
             <th>Kode Pembelian</th>
@@ -26,9 +28,9 @@
                 <td>{{ number_format($row->Harga, 0, ',', '.')}}</td>
                 <td>{{ number_format($row->Harga * $row->Jumlah, 0, ',', '.') }}</td>
                 <td>
-                    <a href="/belanja/beli" class="btn btn-warning btn-sm">Beli</a>
+                    <a href="/belanja/tambah" class="btn btn-warning btn-sm">Beli</a>
 
-                    <a href="//batal/{{ $row->ID }}" class="btn btn-danger btn-sm">Batal</a>
+                    <a href="/batal/{{ $row->ID }}" class="btn btn-danger btn-sm">Batal</a>
                 </td>
             </tr>
         @empty

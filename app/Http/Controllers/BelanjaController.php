@@ -22,28 +22,13 @@ class belanjaController extends Controller
     public function store(Request $request)
     {
 
-        DB::table('keanjangbelanja')->insert([
+        DB::table('keranjangbelanja')->insert([
             'KodeBarang' => $request->KodeBarang,
             'Jumlah' => $request->Jumlah,
             'Harga' => $request->Harga,
         ]);
 
         return redirect('/belanja')->with('success', 'Data belanja berhasil ditambahkan.');
-    }
-
-    public function update(Request $request, $ID)
-    {
-
-        DB::table('keranjangbelanja')
-            ->where('ID', $ID)
-            ->update([
-                'ID' => $request->ID,
-                'KodeBarang' => $request->KodeBarang,
-                'Jumlah' => $request->Jumlah,
-                'Harga' => $request->Harga,
-            ]);
-
-        return redirect()->route('belanja.index')->with('success', 'Data belanja berhasil diubah.');
     }
 
     public function hapus($ID)

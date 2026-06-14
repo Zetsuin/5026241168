@@ -1,36 +1,36 @@
 @extends('template')
-@section('title', 'Beli Barang')
+@section('title', 'Tambah Nilai')
 @section('konten')
 
     <a href="/belanja" class="btn btn-secondary mb-4">Kembali</a>
 
     <div class="card">
         <div class="card-header">
-            Form Beli Barang
+            Form Tambah Nilai
         </div>
 
         <div class="card-body">
-            <form action="/belanja/store" method="post">
+            <form action="/nilai/store" method="post">
                 {{ csrf_field() }}
 
                 <div class="row mb-3">
-                    <label for="nama" class="col-sm-2 col-form-label">Kode Barang</label>
+                    <label for="nama" class="col-sm-2 col-form-label">NRP</label>
                     <div class="col-sm-10">
-                        <input type="text" name="KodeBarang" id="KodeBarang" class="form-control" required>
+                        <input type="text" name="NRP" id="NRP" class="form-control" required>
                     </div>
                 </div>
 
                 <div class="row mb-3">
-                    <label for="jabatan" class="col-sm-2 col-form-label">Jumlah</label>
+                    <label for="jabatan" class="col-sm-2 col-form-label">Nilai Angka</label>
                     <div class="col-sm-10">
-                        <input type="text" name="Jumlah" id="Jumlah" class="form-control" required>
+                        <input type="text" name="NilaiAngka" id="NilaiAngka" class="form-control" required>
                     </div>
                 </div>
 
                 <div class="row mb-3">
-                    <label for="umur" class="col-sm-2 col-form-label">Harga</label>
+                    <label for="umur" class="col-sm-2 col-form-label">SKS</label>
                     <div class="col-sm-10">
-                        <input type="text" name="Harga" id="Harga" class="form-control" required>
+                        <input type="number" name="SKS" id="SKS" class="form-control" required>
                     </div>
                 </div>
 

@@ -6,6 +6,7 @@ use App\Http\Controllers\PegawaiController ;
 use App\Http\Controllers\PegawaiDBController ;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\BelanjaController;
+use App\Http\Controllers\NilaiController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -78,3 +79,7 @@ Route::get('/belanja', [BelanjaController::class, 'index'])->name('belanja.index
 Route::get('/belanja/tambah', [BelanjaController::class, 'tambah'])->name('belanja.tambah');
 Route::post('/belanja/store', [BelanjaController::class, 'store'])->name('belanja.store');
 Route::get('/belanja/batal/{id}', [BelanjaController::class, 'batal']);
+
+Route::get('/nilai', [NilaiController::class, 'index'])->name('nilaikuliah.index');
+Route::get('/nilai/create', [NilaiController::class, 'create'])->name('nilaikuliah.create');
+Route::post('/nilai/store', [NilaiController::class, 'store'])->name('nilaikuliah.store');
