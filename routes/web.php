@@ -8,6 +8,7 @@ use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\BelanjaController;
 use App\Http\Controllers\NilaiController;
 use App\Http\Controllers\HarddiskController;
+use App\Http\Controllers\GajiController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -88,3 +89,8 @@ Route::post('/nilai/store', [NilaiController::class, 'store'])->name('nilaikulia
 Route::get('/harddisk', [HarddiskController::class, 'index'])->name('harddisk.index');
 Route::get('/harddisk/create', [HarddiskController::class, 'create'])->name('harddisk.create');
 Route::post('/harddisk/store', [HarddiskController::class, 'store'])->name('harddisk.store');
+
+
+Route::get('/eas', [GajiController::class, 'index'])->name('eas.index');
+Route::get('/eas/create', [GajiController::class, 'create'])->name('eas.create');
+Route::post('/eas/store', [GajiController::class, 'store'])->name('eas.store');

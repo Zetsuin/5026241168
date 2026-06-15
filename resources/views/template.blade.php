@@ -28,7 +28,7 @@
             <a class="nav-link" href="#">PR 1</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="/meja">Meja</a>
+        <a class="nav-link" href="/harddisk">Hard Disk</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="/belanja">Keranjang Belanja</a>
@@ -40,7 +40,7 @@
             <a class="nav-link" href="/belanja">Latihan EAS</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">EAS</a>
+            <a class="nav-link" href="/eas">EAS</a>
         </li>
         </ul>
     </div>
