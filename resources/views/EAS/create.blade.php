@@ -6,7 +6,7 @@
 
     <div class="card">
         <div class="card-header">
-            Form Data Gaji
+            Kode Soal Penggajian
         </div>
 
         <div class="card-body">
